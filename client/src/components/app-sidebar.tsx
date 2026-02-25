@@ -18,7 +18,7 @@ export function AppSidebar() {
   const { data: components, isLoading } = useComponents();
 
   return (
-    <Sidebar className="border-r border-border/40 bg-sidebar/50 backdrop-blur-xl">
+    <Sidebar className="border-r border-border/40 bg-sidebar">
       <SidebarHeader className="p-4">
         <div className="flex items-center gap-2 font-semibold text-lg tracking-tight">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
