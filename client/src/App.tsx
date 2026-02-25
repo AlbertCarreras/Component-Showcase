@@ -8,14 +8,12 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import ComponentView from "@/pages/component-view";
-import Builder from "@/pages/builder";
 import { AppSidebar } from "@/components/app-sidebar";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home}/>
-      <Route path="/builder" component={Builder}/>
       <Route path="/components/:id" component={ComponentView}/>
       <Route component={NotFound} />
     </Switch>

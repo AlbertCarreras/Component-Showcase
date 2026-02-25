@@ -1,8 +1,8 @@
-import { components, type Component, type InsertComponent } from "@shared/schema";
+import { type Component } from "@shared/schema";
 
 export interface IStorage {
   getComponents(): Promise<Component[]>;
-  createComponent(component: InsertComponent): Promise<Component>;
+  createComponent(component: Omit<Component, "id">): Promise<Component>;
 }
 
 export class MemStorage implements IStorage {
@@ -18,11 +18,11 @@ export class MemStorage implements IStorage {
     return Array.from(this.components.values());
   }
 
-  async createComponent(insertComponent: InsertComponent): Promise<Component> {
+  async createComponent(component: Omit<Component, "id">): Promise<Component> {
     const id = this.currentId++;
-    const component: Component = { ...insertComponent, id };
-    this.components.set(id, component);
-    return component;
+    const newComponent: Component = { ...component, id };
+    this.components.set(id, newComponent);
+    return newComponent;
   }
 }
 

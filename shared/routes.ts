@@ -1,8 +1,7 @@
 import { z } from 'zod';
-import { insertComponentSchema, components } from './schema';
+import { components } from './schema';
 
 export const errorSchemas = {
-  validation: z.object({ message: z.string(), field: z.string().optional() }),
   notFound: z.object({ message: z.string() }),
   internal: z.object({ message: z.string() }),
 };
@@ -14,15 +13,6 @@ export const api = {
       path: '/api/components' as const,
       responses: {
         200: z.array(z.custom<typeof components.$inferSelect>()),
-      },
-    },
-    create: {
-      method: 'POST' as const,
-      path: '/api/components' as const,
-      input: insertComponentSchema,
-      responses: {
-        201: z.custom<typeof components.$inferSelect>(),
-        400: errorSchemas.validation,
       },
     },
   },

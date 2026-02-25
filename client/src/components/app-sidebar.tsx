@@ -1,4 +1,4 @@
-import { Box, Code2, Home, Library, Plus } from "lucide-react";
+import { Box, Home, Library } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import {
   Sidebar,
@@ -37,14 +37,6 @@ export function AppSidebar() {
                   <Link href="/" className="flex items-center gap-2">
                     <Home className="h-4 w-4" />
                     <span>Introduction</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild isActive={location === "/builder"}>
-                  <Link href="/builder" className="flex items-center gap-2">
-                    <Plus className="h-4 w-4" />
-                    <span>Component Builder</span>
                   </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>

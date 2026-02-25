@@ -14,22 +14,6 @@ export async function registerRoutes(
     res.json(comps);
   });
 
-  app.post(api.components.create.path, async (req, res) => {
-    try {
-      const input = api.components.create.input.parse(req.body);
-      const comp = await storage.createComponent(input);
-      res.status(201).json(comp);
-    } catch (err) {
-      if (err instanceof z.ZodError) {
-        return res.status(400).json({
-          message: err.errors[0].message,
-          field: err.errors[0].path.join('.'),
-        });
-      }
-      throw err;
-    }
-  });
-
   // seed mock data
   const existing = await storage.getComponents();
   if (existing.length === 0) {
