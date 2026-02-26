@@ -1,0 +1,18 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Guidelines/Introduction" />
+
+# Introduction
+
+Welcome to the Design System documentation. This site is built with **Storybook** and uses **design tokens** for consistent styling.
+
+## What you'll find here
+
+- **Guidelines** — Principles and usage (this section and more).
+- **Components** — Interactive component catalog with stories.
+
+## Design tokens
+
+Colors and other design decisions live in `tokens/color.json` and are built into CSS variables. Components like Button consume these tokens so that updating the tokens updates the whole system.
+
+Edit `tokens/color.json` and run `npm run build:tokens` (or use the token watcher when running `npm run dev`) to see changes reflected in the components.
