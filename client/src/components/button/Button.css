@@ -1,3 +1,5 @@
+@import "../../tokens.css";
+
 /* Use button.button so we override Tailwind/base when Storybook loads index.css after this file */
 button.button {
   display: inline-flex;
@@ -9,8 +11,8 @@ button.button {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1;
-  color: hsl(0, 0%, 98%);
-  background-color: hsl(0, 0%, 9%);
+  color: #ffffff;
+  background-color: var(--color-primary);
   border: none;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -18,7 +20,7 @@ button.button {
 }
 
 button.button:hover {
-  background-color: hsl(0, 0%, 14%);
+  background-color: color-mix(in srgb, var(--color-primary) 90%, black);
 }
 
 button.button:active {
@@ -26,7 +28,7 @@ button.button:active {
 }
 
 button.button:focus-visible {
-  outline: 2px solid hsl(0, 0%, 9%);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
