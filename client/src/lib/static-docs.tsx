@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "@/legacy-components/button";
+import { Input } from "@/legacy-components/input";
 
 export const CORE_DOCS = [
   {
@@ -15,7 +15,7 @@ export const CORE_DOCS = [
         <Button variant="destructive">Destructive</Button>
       </div>
     ),
-    code: `import { Button } from "@/components/ui/button";
+    code: `import { Button } from "@/legacy-components/button";
 
 export default function Example() {
   return (
@@ -44,8 +44,8 @@ export default function Example() {
         </div>
       </div>
     ),
-    code: `import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+    code: `import { Input } from "@/legacy-components/input";
+import { Label } from "@/legacy-components/label";
 
 export default function Example() {
   return (

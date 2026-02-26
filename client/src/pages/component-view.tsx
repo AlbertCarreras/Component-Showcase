@@ -1,10 +1,10 @@
 import { useRoute } from "wouter";
 import { useComponent } from "@/hooks/use-components";
 import { CodeBlock } from "@/components/code-block";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/legacy-components/tabs";
+import { Button } from "@/legacy-components/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/legacy-components/card";
+import { Skeleton } from "@/legacy-components/skeleton";
 
 export default function ComponentView() {
   const [, params] = useRoute("/components/:id");

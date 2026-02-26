@@ -10,7 +10,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "@/legacy-components/sidebar";
 import { useComponents } from "@/hooks/use-components";
 
 export function AppSidebar() {
@@ -24,7 +24,7 @@ export function AppSidebar() {
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-sm">
             <Library className="h-4 w-4" />
           </div>
-          Gestalt Lite
+          Design System
         </div>
       </SidebarHeader>
       <SidebarContent>

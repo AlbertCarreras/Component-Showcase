@@ -1,7 +1,7 @@
 import { Code2, Layers, Palette, Zap } from "lucide-react";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/legacy-components/button";
+import { Card, CardContent } from "@/legacy-components/card";
 
 export default function Home() {
   return (
