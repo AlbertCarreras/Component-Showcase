@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import "./Button.css";
 
 export type ButtonProps = {
@@ -7,12 +6,16 @@ export type ButtonProps = {
   disabled?: boolean;
   type?: "button" | "submit";
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  ref?: React.Ref<HTMLButtonElement>;
 };
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { text, disabled = false, type = "button", onClick },
-  ref
-) {
+export default function Button({
+  text,
+  disabled = false,
+  type = "button",
+  onClick,
+  ref,
+}: ButtonProps) {
   return (
     <button
       ref={ref}
@@ -24,8 +27,6 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
       <span className="button__text">{text}</span>
     </button>
   );
-});
+}
 
 Button.displayName = "Button";
-
-export default Button;
