@@ -3,6 +3,7 @@ import path from "path";
 import { mergeConfig } from "vite";
 
 const config: StorybookConfig = {
+  staticDirs: ["../client/public"],
   stories: [
     "../client/src/guidelines/**/*.mdx",
     "../client/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
