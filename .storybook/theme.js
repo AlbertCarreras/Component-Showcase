@@ -3,6 +3,6 @@ import { create } from '@storybook/theming';
 export default create({
   base: 'light',
   brandTitle: 'ThoughtfulDS',
-  brandImage: '/tds-logo.png',
+  brandImage: '/thoughtfulds_favicon.ico',
   brandTarget: '_self',
 });
