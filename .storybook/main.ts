@@ -18,7 +18,9 @@ const config: StorybookConfig = {
     options: {},
   },
   viteFinal: async (config) => {
+    const base = process.env.BASE_PATH ?? "/";
     return mergeConfig(config, {
+      base,
       resolve: {
         alias: {
           "@": path.resolve(__dirname, "../client/src"),
